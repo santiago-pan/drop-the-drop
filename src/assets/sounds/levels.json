@@ -1,0 +1,2534 @@
+{
+  "levels": [
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 120,
+      "level": 1,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 122,
+      "level": 2,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 124,
+      "level": 3,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 126,
+      "level": 4,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 128,
+      "level": 5,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 130,
+      "level": 6,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 132,
+      "level": 7,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 134,
+      "level": 8,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 136,
+      "level": 9,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 138,
+      "level": 10,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 140,
+      "level": 11,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 142,
+      "level": 12,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 144,
+      "level": 13,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 146,
+      "level": 14,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 148,
+      "level": 15,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 150,
+      "level": 16,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 152,
+      "level": 17,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 154,
+      "level": 18,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 156,
+      "level": 19,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 158,
+      "level": 20,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 160,
+      "level": 21,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 162,
+      "level": 22,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 164,
+      "level": 23,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 166,
+      "level": 24,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 168,
+      "level": 25,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 170,
+      "level": 26,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 172,
+      "level": 27,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 174,
+      "level": 28,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 176,
+      "level": 29,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 178,
+      "level": 30,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 180,
+      "level": 31,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 182,
+      "level": 32,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 184,
+      "level": 33,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 186,
+      "level": 34,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 188,
+      "level": 35,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 190,
+      "level": 36,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 192,
+      "level": 37,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 194,
+      "level": 38,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 196,
+      "level": 39,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 198,
+      "level": 40,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 200,
+      "level": 41,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 202,
+      "level": 42,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 204,
+      "level": 43,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 206,
+      "level": 44,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 208,
+      "level": 45,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 210,
+      "level": 46,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 212,
+      "level": 47,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 214,
+      "level": 48,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 216,
+      "level": 49,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 218,
+      "level": 50,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 220,
+      "level": 51,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 222,
+      "level": 52,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 224,
+      "level": 53,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 226,
+      "level": 54,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 228,
+      "level": 55,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 230,
+      "level": 56,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 232,
+      "level": 57,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 234,
+      "level": 58,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 236,
+      "level": 59,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 238,
+      "level": 60,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 240,
+      "level": 61,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 242,
+      "level": 62,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 244,
+      "level": 63,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 246,
+      "level": 64,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 248,
+      "level": 65,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 250,
+      "level": 66,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 252,
+      "level": 67,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 254,
+      "level": 68,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 256,
+      "level": 69,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 258,
+      "level": 70,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 260,
+      "level": 71,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 262,
+      "level": 72,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 264,
+      "level": 73,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 266,
+      "level": 74,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 268,
+      "level": 75,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 270,
+      "level": 76,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 272,
+      "level": 77,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 274,
+      "level": 78,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 276,
+      "level": 79,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 278,
+      "level": 80,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 280,
+      "level": 81,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 282,
+      "level": 82,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 284,
+      "level": 83,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 286,
+      "level": 84,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 288,
+      "level": 85,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 290,
+      "level": 86,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 292,
+      "level": 87,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 294,
+      "level": 88,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 296,
+      "level": 89,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 298,
+      "level": 90,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 300,
+      "level": 91,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 302,
+      "level": 92,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 304,
+      "level": 93,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 306,
+      "level": 94,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 308,
+      "level": 95,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 310,
+      "level": 96,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 312,
+      "level": 97,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 314,
+      "level": 98,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 316,
+      "level": 99,
+      "speed": 35
+    },
+    {
+      "greens": [],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 318,
+      "level": 100,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 120,
+      "level": 101,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 122,
+      "level": 102,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 124,
+      "level": 103,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 126,
+      "level": 104,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 128,
+      "level": 105,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 130,
+      "level": 106,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 132,
+      "level": 107,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 134,
+      "level": 108,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 136,
+      "level": 109,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 138,
+      "level": 110,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 140,
+      "level": 111,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 142,
+      "level": 112,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 144,
+      "level": 113,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 146,
+      "level": 114,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 148,
+      "level": 115,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 150,
+      "level": 116,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 152,
+      "level": 117,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 154,
+      "level": 118,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 156,
+      "level": 119,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 158,
+      "level": 120,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 160,
+      "level": 121,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 162,
+      "level": 122,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 164,
+      "level": 123,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 166,
+      "level": 124,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 168,
+      "level": 125,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 170,
+      "level": 126,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 172,
+      "level": 127,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 174,
+      "level": 128,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 176,
+      "level": 129,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 178,
+      "level": 130,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 180,
+      "level": 131,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 182,
+      "level": 132,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 184,
+      "level": 133,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 186,
+      "level": 134,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 188,
+      "level": 135,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 190,
+      "level": 136,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 192,
+      "level": 137,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 194,
+      "level": 138,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 196,
+      "level": 139,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 18 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [],
+      "gap": 120,
+      "difficulty": 198,
+      "level": 140,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 200,
+      "level": 141,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 202,
+      "level": 142,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 204,
+      "level": 143,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 206,
+      "level": 144,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 18 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 208,
+      "level": 145,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 18 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 210,
+      "level": 146,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 212,
+      "level": 147,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 214,
+      "level": 148,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 216,
+      "level": 149,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 18 }],
+      "enemies": [{ "type": "aircraft_baattery" }],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 218,
+      "level": 150,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 220,
+      "level": 151,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 222,
+      "level": 152,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 224,
+      "level": 153,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 226,
+      "level": 154,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 228,
+      "level": 155,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 230,
+      "level": 156,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 232,
+      "level": 157,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 234,
+      "level": 158,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 236,
+      "level": 159,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 238,
+      "level": 160,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 240,
+      "level": 161,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 242,
+      "level": 162,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 244,
+      "level": 163,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 246,
+      "level": 164,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 248,
+      "level": 165,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 18 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 250,
+      "level": 166,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 18 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 252,
+      "level": 167,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 254,
+      "level": 168,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 256,
+      "level": 169,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 18 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }],
+      "gap": 120,
+      "difficulty": 258,
+      "level": 170,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 260,
+      "level": 171,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 262,
+      "level": 172,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 264,
+      "level": 173,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 266,
+      "level": 174,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 268,
+      "level": 175,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 270,
+      "level": 176,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 18 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 272,
+      "level": 177,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 274,
+      "level": 178,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 276,
+      "level": 179,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 18 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [{ "type": "more_shoots" }, { "type": "power_drops" }],
+      "gap": 120,
+      "difficulty": 278,
+      "level": 180,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 280,
+      "level": 181,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 282,
+      "level": 182,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 284,
+      "level": 183,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 18 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 286,
+      "level": 184,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 18 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 288,
+      "level": 185,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 290,
+      "level": 186,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 292,
+      "level": 187,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 20 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 294,
+      "level": 188,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 296,
+      "level": 189,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 298,
+      "level": 190,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 300,
+      "level": 191,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 302,
+      "level": 192,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 19 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 304,
+      "level": 193,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 20 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 306,
+      "level": 194,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 19 }, { "type": 18 }, { "type": 20 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 308,
+      "level": 195,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 19 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 310,
+      "level": 196,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 18 }, { "type": 19 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 312,
+      "level": 197,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 314,
+      "level": 198,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 18 }, { "type": 19 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 316,
+      "level": 199,
+      "speed": 35
+    },
+    {
+      "greens": [{ "type": 20 }, { "type": 20 }, { "type": 18 }],
+      "enemies": [
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" },
+        { "type": "aircraft_baattery" }
+      ],
+      "extras": [
+        { "type": "more_shoots" },
+        { "type": "power_drops" },
+        { "type": "low_speed" }
+      ],
+      "gap": 120,
+      "difficulty": 318,
+      "level": 200,
+      "speed": 35
+    }
+  ]
+}
