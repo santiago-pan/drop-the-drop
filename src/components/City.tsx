@@ -1,15 +1,10 @@
 import React, { useRef } from 'react';
 import { useStore } from '../store/store';
 import { Building, IFloor } from './Building';
-import { GameProps } from './Game';
 
-type CityProps = GameProps & {
-  buildingWidth: number;
-};
-
-export function City(props: CityProps) {
-  const { x, y } = usePosition(props.cityWidth, props.cityHeight);
+export function City(props: {}) {
   const store = useStore();
+  const { x, y } = usePosition(store.state.cityWidth, store.state.cityHeight);
 
   return (
     <div>

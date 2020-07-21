@@ -1,10 +1,15 @@
-import { IDrop } from '../components/Drop';
 import { IFloor } from '../components/Building';
+import { IDrop } from '../components/Drop';
 import { IExplosion } from '../components/Explosion';
 import * as Actions from './actions';
 import { Action } from './actions';
 
 export type IState = {
+  frameRate: number;
+  cityWidth: number;
+  cityHeight: number;
+  buildingWidth: number;
+  difficulty: number;
   buildings: Array<IFloor[]>;
   drops: Map<string, IDrop>;
   explosions: Map<string, IExplosion>;
@@ -12,6 +17,11 @@ export type IState = {
 };
 
 export const InitialState: IState = {
+  frameRate: 25,
+  cityWidth: 800,
+  cityHeight: 431,
+  difficulty: 3,
+  buildingWidth: 42,
   buildings: new Array<[]>(),
   drops: new Map<string, IDrop>(),
   explosions: new Map<string, IExplosion>(),

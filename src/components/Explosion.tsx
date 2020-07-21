@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Type } from '../store/actions';
 import { useStore } from '../store/store';
 import { GameImages, GameImagesContext } from '../utils/Images';
-import { GameProps } from './Game';
 
 type ExplosionAreaProps = {
   x: number;
@@ -46,7 +45,7 @@ export type IExplosion = {
   initY: number;
 };
 
-type ExplosionProps = IExplosion & GameProps;
+type ExplosionProps = IExplosion;
 
 export function Explosion(props: ExplosionProps) {
   const store = useStore();

@@ -5,7 +5,6 @@ import { Type } from '../store/actions';
 import { StoreContextType, useStore } from '../store/store';
 import plane from './../assets/images/ic_plane_f21.png';
 import { getBuildingHeight } from './Building';
-import { GameProps } from './Game';
 
 // Plane configuration
 
@@ -32,14 +31,14 @@ const PlaneStyleAttr = styled(PlaneStyle as any).attrs((props: any) => ({
   },
 }))``;
 
-type PlaneProps = GameProps & {
-  cityWidth: number;
-};
-
-export function Plane(props: PlaneProps) {
+export function Plane() {
   const store = useStore();
 
-  const { x, y, impact } = usePosition(props.cityWidth, props.cityHeight, store);
+  const { x, y, impact } = usePosition(
+    store.state.cityWidth,
+    store.state.cityHeight,
+    store,
+  );
 
   useEffect(() => {
     document.addEventListener('keypress', handleKeyPress);
@@ -53,7 +52,7 @@ export function Plane(props: PlaneProps) {
       removeCloud(store);
       addExplosion(store, x, y);
     }
-  }, [impact, store, x, y])
+  }, [impact, store, x, y]);
 
   function handleKeyPress(event: any) {
     if (event.code === 'Space') {
@@ -98,7 +97,13 @@ function usePosition(
     x.current = x.current + displacement;
   }
 
-  const impact = checkBuildingImpact(cityHeight, cityWidth, x.current, y.current + 47, store);
+  const impact = checkBuildingImpact(
+    cityHeight,
+    cityWidth,
+    x.current,
+    y.current + 47,
+    store,
+  );
 
   return { x: x.current, y: y.current, explosion: explosion.current, impact };
 }
@@ -120,10 +125,10 @@ function checkBuildingImpact(
     const buildingHeight = getBuildingHeight(building);
 
     if (y > cityHeight - buildingHeight) {
-      return  true
+      return true;
     }
   }
-  return false
+  return false;
 }
 
 function removeCloud(store: StoreContextType) {

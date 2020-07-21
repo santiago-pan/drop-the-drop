@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useStore } from '../store/store';
 
 export const DEFAULT_BUILDING_WIDTH = 84;
 
@@ -16,19 +17,19 @@ const FloorImageStyle = styled.img<FloorAreaProps>`
   object-fit: contain;
 `;
 
-const FloorStyle = styled(FloorImageStyle as any).attrs((props: FloorAreaProps) => ({
-  style: {
-    bottom: `${props.y}px`,
-    left: `${props.x}px`,
-  },
-}))``;
+const FloorStyle = styled(FloorImageStyle as any).attrs(
+  (props: FloorAreaProps) => ({
+    style: {
+      bottom: `${props.y}px`,
+      left: `${props.x}px`,
+    },
+  }),
+)``;
 
 type BuildingProps = {
   x: number;
   y: number;
-  buildingWidth: number;
   buildingIndex: number;
-  difficulty: number;
   building: IFloor[];
 };
 
@@ -39,6 +40,7 @@ export type IFloor = {
 };
 
 export function Building(props: BuildingProps) {
+  const store = useStore();
   return (
     <div>
       {props.building.map((floor, index) => {
@@ -47,9 +49,9 @@ export function Building(props: BuildingProps) {
           <FloorStyle
             key={index}
             src={floor.img.src}
-            x={props.x + props.buildingWidth * props.buildingIndex}
+            x={props.x + store.state.buildingWidth * props.buildingIndex}
             y={props.y + floorHeight}
-            width={props.buildingWidth}
+            width={store.state.buildingWidth}
           />
         );
       })}
@@ -66,9 +68,9 @@ function getFloorHeight(building: IFloor[], index: number): number {
 }
 
 export function getBuildingHeight(building: IFloor[]) {
-  let height = 0
+  let height = 0;
   for (let i = 0; i < building.length; i++) {
     height += building[i].height;
   }
-  return height
+  return height;
 }

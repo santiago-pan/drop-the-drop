@@ -13,16 +13,18 @@ import { Type } from '../store/actions';
 const Area = styled.div`
   height: 100%;
   width: 100%;
+  padding-top: 0px;
   background: orange;
 `;
 
 const GameAreaStyle = styled.div`
+
   height: 431px;
   min-width: 800px;
   max-width: 800px;
   background: aliceblue;
   width: 50%;
-  margin: 0 auto;
+  margin: 0px auto;
   overflow: hidden;
 `;
 
@@ -53,14 +55,7 @@ enum GameStatus {
   GAME_PAUSED = 3,
 }
 
-export type GameProps = {
-  frameRate: number;
-  cityWidth: number;
-  cityHeight: number;
-  difficulty: number;
-};
-
-export function Game(props: GameProps) {
+export function Game(props: {}) {
   const store = useStore();
   const pauseGame = useRef(false);
 
@@ -97,9 +92,9 @@ export function Game(props: GameProps) {
   });
 
   useBuildCity(
-    props.cityWidth,
+    store.state.cityWidth,
     42,
-    props.difficulty,
+    store.state.difficulty,
   );
 
   function handleKeyPress(event: any) {
@@ -114,8 +109,8 @@ export function Game(props: GameProps) {
       <GameArea>
         {store.state.cloud && <Plane {...props} />}
         {useMemo(() => {
-          return <City {...props} buildingWidth={42} />
-        },[props])}
+          return <City />
+        },[])}
         {Array.from(store.state.drops.values()).map((drop) => (
           <Drop {...props} {...drop} key={drop.id} buildingWidth={42} />
         ))}

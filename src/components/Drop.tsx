@@ -5,7 +5,6 @@ import { Type } from '../store/actions';
 import { StoreContextType, useStore } from '../store/store';
 import { GameImagesContext } from '../utils/Images';
 import { getBuildingHeight } from './Building';
-import { GameProps } from './Game';
 
 // Style
 
@@ -42,7 +41,7 @@ export type IDrop = {
   initY: number;
 };
 
-type DropProps = { buildingWidth: number } & IDrop & GameProps;
+type DropProps = { buildingWidth: number } & IDrop;
 
 export default function Drop(props: DropProps) {
   const store = useStore();
@@ -50,8 +49,8 @@ export default function Drop(props: DropProps) {
   const { x, y, rotation, impact, buildingIndex } = usePosition(
     props.initX,
     props.initY,
-    props.cityHeight,
-    props.cityWidth,
+    store.state.cityHeight,
+    store.state.cityWidth,
     store,
     props.id,
   );
