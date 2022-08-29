@@ -18,7 +18,7 @@ const ExplosionImageStyle = styled.div<ExplosionAreaProps>`
   overflow: hidden;
 `;
 
-const ExplosionStyle = styled(ExplosionImageStyle as any).attrs(
+const ExplosionStyle = styled(ExplosionImageStyle).attrs(
   (props: ExplosionAreaProps) => ({
     style: {
       top: `${props.y}px`,

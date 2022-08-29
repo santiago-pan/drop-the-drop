@@ -18,7 +18,6 @@ const Area = styled.div`
 `;
 
 const GameAreaStyle = styled.div`
-
   height: 431px;
   min-width: 800px;
   max-width: 800px;
@@ -28,7 +27,7 @@ const GameAreaStyle = styled.div`
   overflow: hidden;
 `;
 
-const GameArea = styled(GameAreaStyle as any).attrs((props: any) => ({
+const GameArea = styled(GameAreaStyle).attrs((props: any) => ({
   style: {
     backgroundImage: `url(${backgroundImage})`,
   },
@@ -71,15 +70,13 @@ export function Game(props: {}) {
   });
 
   useEffect(() => {
-    let interval = 0;
+    let interval = setInterval(onTick, TICK_RATE);
 
-    const onTick = () => {
+    function onTick() {
       if (!pauseGame.current) {
         setGameState({ ...gameState, timestamp: +new Date() });
       }
-    };
-
-    interval = setInterval(onTick, TICK_RATE);
+    }
 
     return () => clearInterval(interval);
   }, [gameState]);
@@ -91,11 +88,7 @@ export function Game(props: {}) {
     };
   });
 
-  useBuildCity(
-    store.state.cityWidth,
-    42,
-    store.state.difficulty,
-  );
+  useBuildCity(store.state.cityWidth, 42, store.state.difficulty);
 
   function handleKeyPress(event: any) {
     if (event.code === 'KeyP') {
@@ -109,8 +102,8 @@ export function Game(props: {}) {
       <GameArea>
         {store.state.cloud && <Plane {...props} />}
         {useMemo(() => {
-          return <City />
-        },[])}
+          return <City />;
+        }, [])}
         {Array.from(store.state.drops.values()).map((drop) => (
           <Drop {...props} {...drop} key={drop.id} buildingWidth={42} />
         ))}

@@ -24,7 +24,7 @@ const PlaneStyle = styled.img<PlaneAreaProps>`
   object-fit: contain;
 `;
 
-const PlaneStyleAttr = styled(PlaneStyle as any).attrs((props: any) => ({
+const PlaneStyleAttr = styled(PlaneStyle).attrs((props: any) => ({
   style: {
     top: `${props.y}px`,
     left: `${props.x}px`,
