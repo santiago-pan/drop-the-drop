@@ -23,7 +23,7 @@ const DropStyle = styled.img<DropAreaProps>`
   transform: rotate(${(props) => props.rotation}deg);
 `;
 
-const DropStyleAttr = styled(DropStyle as any).attrs((props: any) => ({
+const DropStyleAttr = styled(DropStyle).attrs((props: any) => ({
   style: {
     top: `${props.y}px`,
     left: `${props.x}px`,

@@ -17,7 +17,7 @@ const FloorImageStyle = styled.img<FloorAreaProps>`
   object-fit: contain;
 `;
 
-const FloorStyle = styled(FloorImageStyle as any).attrs(
+const FloorStyle = styled(FloorImageStyle).attrs(
   (props: FloorAreaProps) => ({
     style: {
       bottom: `${props.y}px`,
