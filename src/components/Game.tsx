@@ -25,7 +25,7 @@ const Area = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: normal;
   padding-top: 0px;
   background: #ffa50029;
 `;
@@ -43,7 +43,7 @@ const GameAreaStyle = styled.div`
 
 const TitleImage = styled.img`
   width: 40%;
-  padding: 20px;
+  padding: 60px 20px;
   max-width: 520px;
 `;
 

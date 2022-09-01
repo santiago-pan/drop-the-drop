@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E1O8M18M5AKL89 --paths / --profile santiago",
+    "deploy": "npm run build && aws s3 sync --acl public-read build/. s3://dropthedrop.pancarneiro.com/ --profile santiago && npm run invalidate"
   },
   "eslintConfig": {
     "extends": [

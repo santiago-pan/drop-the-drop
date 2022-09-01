@@ -87,7 +87,7 @@ function usePosition(
   const cloudStartX = useRef(-CLOUD_WIDTH);
   const maxCloudX = useRef(forestWidth);
   const x = useRef(cloudStartX.current);
-  const y = useRef(180);
+  const y = useRef(0);
   const explosion = useRef(false);
 
   const displacement = (timeDiff / 1000) * SPEED;
