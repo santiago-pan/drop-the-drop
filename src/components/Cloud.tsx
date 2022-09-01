@@ -1,42 +1,49 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import uuidv1 from 'uuid/v1';
 import { Type } from '../store/actions';
 import { StoreContextType, useStore } from '../store/store';
-import plane from './../assets/images/ic_plane_f21.png';
-import { getBuildingHeight } from './Building';
+import cloud from './../assets/images/ic_cloud_1.png';
+import { getBuildingHeight } from './Bamboo';
 
-// Plane configuration
-
+// Cloud configuration
 const SPEED = 100;
-const PLANE_WIDTH = 80;
+const CLOUD_WIDTH = 80;
+const CLOUD_HEIGHT = 50;
 const DOWN_SPEED = 40;
 
-type PlaneAreaProps = {
+type CloudAreaProps = {
   x: number;
   y: number;
 };
 
-const PlaneStyle = styled.img<PlaneAreaProps>`
+const CloudStyle = styled.img<CloudAreaProps>`
   position: absolute;
-  width: ${PLANE_WIDTH}px;
+  width: ${CLOUD_WIDTH}px;
   height: auto;
   object-fit: contain;
 `;
 
-const PlaneStyleAttr = styled(PlaneStyle).attrs((props: any) => ({
-  style: {
-    top: `${props.y}px`,
-    left: `${props.x}px`,
-  },
-}))``;
+const CloudStyleAttr = styled(CloudStyle).attrs(
+  (props: { x: number; y: number }) => ({
+    style: {
+      top: `${props.y}px`,
+      left: `${props.x}px`,
+    },
+  }),
+)``;
 
-export function Plane() {
+type CloudProps = {
+  timeDiff: number;
+};
+
+export function Cloud(props: CloudProps) {
   const store = useStore();
 
   const { x, y, impact } = usePosition(
-    store.state.cityWidth,
-    store.state.cityHeight,
+    props.timeDiff,
+    store.state.forestWidth,
+    store.state.forestHeight,
     store,
   );
 
@@ -61,70 +68,64 @@ export function Plane() {
         payload: {
           id: uuidv1(),
           type: 'drop1',
-          initX: x + PLANE_WIDTH / 2,
+          initX: x + CLOUD_WIDTH / 2,
           initY: y + 40,
         },
       });
     }
   }
 
-  return <PlaneStyleAttr src={plane} x={x} y={y} />;
+  return <CloudStyleAttr src={cloud} x={x} y={y} />;
 }
 
 function usePosition(
-  cityWidth: number,
-  cityHeight: number,
+  timeDiff: number,
+  forestWidth: number,
+  forestHeight: number,
   store: StoreContextType,
 ) {
-  const planeStartX = useRef(
-    window.innerWidth / 2 - cityWidth / 2 - PLANE_WIDTH,
-  );
-  const maxPlaneX = useRef(window.innerWidth / 2 + cityWidth / 2);
-  const x = useRef(planeStartX.current);
-  const y = useRef(0);
-  const timeRef = useRef<number>(+new Date());
+  const cloudStartX = useRef(-CLOUD_WIDTH);
+  const maxCloudX = useRef(forestWidth);
+  const x = useRef(cloudStartX.current);
+  const y = useRef(180);
   const explosion = useRef(false);
 
-  const currentTime = +new Date();
-  const frameDiff = currentTime - timeRef.current;
-  timeRef.current = currentTime;
-
-  const displacement = (frameDiff / 1000) * SPEED;
-  if (x.current > maxPlaneX.current) {
+  const displacement = (timeDiff / 1000) * SPEED;
+  if (x.current > maxCloudX.current) {
     y.current = y.current + DOWN_SPEED;
-    x.current = planeStartX.current;
+    x.current = -CLOUD_WIDTH;
   } else {
     x.current = x.current + displacement;
   }
 
-  const impact = checkBuildingImpact(
-    cityHeight,
-    cityWidth,
+  const impact = checkImpact(
+    forestHeight,
+    forestWidth,
     x.current,
-    y.current + 47,
+    y.current,
     store,
   );
 
   return { x: x.current, y: y.current, explosion: explosion.current, impact };
 }
 
-function checkBuildingImpact(
-  cityHeight: number,
-  cityWidth: number,
+function checkImpact(
+  forestHeight: number,
+  forestWidth: number,
   x: number,
   y: number,
   store: StoreContextType,
 ): boolean {
-  const cityStartX = window.innerWidth / 2 - cityWidth / 2;
   const buildingWidth = 42;
-  const buildingIndex = Math.floor((x + 50 - cityStartX) / buildingWidth);
+  const xOffset = buildingWidth / 2;
+  const buildingIndex = Math.floor((x + CLOUD_WIDTH - xOffset) / buildingWidth);
 
   const building = store.state.buildings[buildingIndex];
 
   if (building) {
     const buildingHeight = getBuildingHeight(building);
 
-    if (y > cityHeight - buildingHeight) {
+    if (y + CLOUD_HEIGHT > forestHeight - buildingHeight) {
       return true;
     }
   }

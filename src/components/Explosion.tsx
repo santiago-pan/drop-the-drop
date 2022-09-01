@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Type } from '../store/actions';
 import { useStore } from '../store/store';
@@ -18,7 +18,7 @@ const ExplosionImageStyle = styled.div<ExplosionAreaProps>`
   overflow: hidden;
 `;
 
-const ExplosionStyle = styled(ExplosionImageStyle).attrs(
+const ExplosionImageStyleAttr = styled(ExplosionImageStyle).attrs(
   (props: ExplosionAreaProps) => ({
     style: {
       top: `${props.y}px`,
@@ -33,10 +33,17 @@ type ExplostionFrameProps = {
   width: number;
 };
 
-const ExplosionFrame = styled.img<ExplostionFrameProps>`
-  width: ${(props) => props.totalWidth}px;
-  transform: translate(${(props) => -1 * props.frame * props.width}px);
+const ExplosionFrameStyle = styled.img<ExplostionFrameProps>`
 `;
+
+const ExplosionFrameStyleAttr = styled(ExplosionFrameStyle).attrs(
+  (props: ExplostionFrameProps) => ({
+    style: {
+      width: `${props.totalWidth}px`,
+      transform: `translate(${ -1 * props.frame * props.width}px)`,
+    },
+  }),
+)``;
 
 export type IExplosion = {
   id: string;
@@ -79,18 +86,18 @@ export function Explosion(props: ExplosionProps) {
   }, [frames, store, props.id]);
 
   return (
-    <ExplosionStyle
+    <ExplosionImageStyleAttr
       x={x.current - width / 2 + 12}
       y={y.current - width / 2}
       width={width}
     >
-      <ExplosionFrame
+      <ExplosionFrameStyleAttr
         src={explosion.src}
         frame={frame.current}
         totalWidth={totalWidth}
         width={width}
       />
-    </ExplosionStyle>
+    </ExplosionImageStyleAttr>
   );
 }
 

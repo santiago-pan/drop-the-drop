@@ -46,11 +46,14 @@ async function Images(): Promise<GameImages> {
   async function loadRoofs() {
     return {
       FLOOR_ROOF_A: await loadImage(images.ic_floor_roof_type_a),
-      FLOOR_ROOF_B: await loadImage(images.ic_floor_roof_type_b),
-      FLOOR_ROOF_C: await loadImage(images.ic_floor_roof_type_c),
-      FLOOR_ROOF_D: await loadImage(images.ic_floor_roof_type_d),
+      // FLOOR_ROOF_B: await loadImage(images.ic_floor_roof_type_b),
+      // FLOOR_ROOF_C: await loadImage(images.ic_floor_roof_type_c),
+      // FLOOR_ROOF_D: await loadImage(images.ic_floor_roof_type_d),
       FLOOR_ROOF_E: await loadImage(images.ic_floor_roof_type_e),
       FLOOR_ROOF_F: await loadImage(images.ic_floor_roof_type_f),
+      FLOOR_ROOF_G: await loadImage(images.ic_floor_roof_type_g),
+      FLOOR_ROOF_H: await loadImage(images.ic_floor_roof_type_h),
+      FLOOR_ROOF_I: await loadImage(images.ic_floor_roof_type_i),
     };
   }
 
@@ -75,9 +78,9 @@ async function Images(): Promise<GameImages> {
 
   async function loadPlanes() {
     return {
-      PLANE_A: await loadImage(images.ic_plane_type_a),
+      // PLANE_A: await loadImage(images.ic_plane_type_a),
       PLANE_B: await loadImage(images.ic_plane_type_b),
-      PLANE_C: await loadImage(images.ic_plane_type_c),
+      // PLANE_C: await loadImage(images.ic_plane_type_c),
     };
   }
 

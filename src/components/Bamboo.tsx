@@ -39,7 +39,7 @@ export type IFloor = {
   type: string;
 };
 
-export function Building(props: BuildingProps) {
+export function Bamboo(props: BuildingProps) {
   const store = useStore();
   return (
     <div>

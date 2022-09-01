@@ -1,4 +1,4 @@
-import { IFloor } from '../components/Building';
+import { IFloor } from '../components/Bamboo';
 import { IDrop } from '../components/Drop';
 import { IExplosion } from '../components/Explosion';
 import * as Actions from './actions';
@@ -6,8 +6,8 @@ import { Action } from './actions';
 
 export type IState = {
   frameRate: number;
-  cityWidth: number;
-  cityHeight: number;
+  forestWidth: number;
+  forestHeight: number;
   buildingWidth: number;
   difficulty: number;
   buildings: Array<IFloor[]>;
@@ -18,8 +18,8 @@ export type IState = {
 
 export const InitialState: IState = {
   frameRate: 25,
-  cityWidth: 800,
-  cityHeight: 431,
+  forestWidth: 800,
+  forestHeight: 431,
   difficulty: 3,
   buildingWidth: 42,
   buildings: new Array<[]>(),

@@ -1,16 +1,16 @@
 import React, { useRef } from 'react';
 import { useStore } from '../store/store';
-import { Building, IFloor } from './Building';
+import { Bamboo, IFloor } from './Bamboo';
 
-export function City(props: {}) {
+export function Forest(props: {}) {
   const store = useStore();
-  const { x, y } = usePosition(store.state.cityWidth, store.state.cityHeight);
+  const { x, y } = usePosition(store.state.forestWidth, store.state.forestHeight);
 
   return (
     <div>
       {store.state.buildings.map((building: IFloor[], index: number) => {
         return (
-          <Building
+          <Bamboo
             key={index}
             {...props}
             x={x.current}
@@ -24,9 +24,9 @@ export function City(props: {}) {
   );
 }
 
-function usePosition(cityWidth: number, cityHeight: number) {
-  const cityStartX = useRef(window.innerWidth / 2 - cityWidth / 2);
-  const x = useRef(cityStartX.current);
-  const y = useRef(window.innerHeight - cityHeight);
+function usePosition(forestWidth: number, forestHeight: number) {
+  const forestStartX = useRef(0);
+  const x = useRef(forestStartX.current);
+  const y = useRef(0);
   return { x, y };
 }

@@ -1,20 +1,33 @@
-import React, { useEffect, useRef, useState, useContext, useMemo } from 'react';
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import styled from 'styled-components';
-import { useStore, StoreContextType } from '../store/store';
-import backgroundImage from './../assets/images/desert.jpg';
-import Drop from './Drop';
-import { City } from './City';
-import { Explosion } from './Explosion';
-import { Plane } from './Plane';
-import { IFloor, DEFAULT_BUILDING_WIDTH } from './Building';
-import { GameImages, GameImagesContext } from '../utils/Images';
 import { Type } from '../store/actions';
+import { StoreContextType, useStore } from '../store/store';
+import { GameImages, GameImagesContext } from '../utils/Images';
+import backgroundImage from './../assets/images/desert.jpg';
+import { DEFAULT_BUILDING_WIDTH, IFloor } from './Bamboo';
+import { Cloud } from './Cloud';
+import Drop from './Drop';
+import { Explosion } from './Explosion';
+import { Forest } from './Forest';
+
+import titleImage from './../assets/drop-the-drop.png';
 
 const Area = styled.div`
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 0px;
-  background: orange;
+  background: #ffa50029;
 `;
 
 const GameAreaStyle = styled.div`
@@ -25,10 +38,19 @@ const GameAreaStyle = styled.div`
   width: 50%;
   margin: 0px auto;
   overflow: hidden;
+  position: relative;
+`;
+
+const TitleImage = styled.img`
+  width: 40%;
+  padding: 20px;
+  max-width: 520px;
 `;
 
 const GameArea = styled(GameAreaStyle).attrs((props: any) => ({
   style: {
+    border: "2px solid #aaa",
+    borderRadius: '4px',
     backgroundImage: `url(${backgroundImage})`,
   },
 }))``;
@@ -37,6 +59,7 @@ const TICK_RATE = 20;
 
 type GameState = {
   timestamp: number;
+  timeDiff: number;
   shots: number;
   points: number;
   totalPoints: number;
@@ -60,6 +83,7 @@ export function Game(props: {}) {
 
   const [gameState, setGameState] = useState<GameState>({
     timestamp: +new Date(),
+    timeDiff: TICK_RATE,
     shots: 0,
     points: 0,
     totalPoints: 0,
@@ -74,12 +98,18 @@ export function Game(props: {}) {
 
     function onTick() {
       if (!pauseGame.current) {
-        setGameState({ ...gameState, timestamp: +new Date() });
+        setGameState((gameState) => {
+          return {
+            ...gameState,
+            timestamp: +new Date(),
+            timeDiff: +new Date() - gameState.timestamp,
+          };
+        });
       }
     }
 
     return () => clearInterval(interval);
-  }, [gameState]);
+  }, []);
 
   useEffect(() => {
     document.addEventListener('keypress', handleKeyPress);
@@ -88,35 +118,37 @@ export function Game(props: {}) {
     };
   });
 
-  useBuildCity(store.state.cityWidth, 42, store.state.difficulty);
+  useBuildScenery(store.state.forestWidth, 42, store.state.difficulty);
 
   function handleKeyPress(event: any) {
     if (event.code === 'KeyP') {
       pauseGame.current = !pauseGame.current;
-      console.log(pauseGame.current);
     }
   }
 
   return (
     <Area>
+      <TitleImage src={titleImage}/>
       <GameArea>
-        {store.state.cloud && <Plane {...props} />}
+        {store.state.cloud && (
+          <Cloud timeDiff={gameState.timeDiff} {...props} />
+        )}
         {useMemo(() => {
-          return <City />;
+          return <Forest />;
         }, [])}
         {Array.from(store.state.drops.values()).map((drop) => (
           <Drop {...props} {...drop} key={drop.id} buildingWidth={42} />
         ))}
         {Array.from(store.state.explosions.values()).map((explosion) => (
-          <Explosion {...props} {...explosion} key={explosion.id} />
+          <Explosion {...explosion} key={explosion.id} />
         ))}
       </GameArea>
     </Area>
   );
 }
 
-const useBuildCity = (
-  cityWidth: number,
+const useBuildScenery = (
+  forestWidth: number,
   buildingWidth: number,
   difficulty: number,
 ): IFloor[][] => {
@@ -124,34 +156,35 @@ const useBuildCity = (
   const images = useContext<GameImages>(GameImagesContext);
   const store = useStore();
 
-  const city = useRef<IFloor[][]>([]);
+  const scenery = useRef<IFloor[][]>([]);
+
+  const doBuildScenery = useCallback(() => {
+    scenery.current = buildScenery(
+      forestWidth,
+      buildingWidth,
+      difficulty,
+      images,
+      store,
+    );
+  }, [forestWidth, buildingWidth, difficulty, images, store]);
 
   useEffect(() => {
     if (loaded === false) {
-      (async () => {
-        city.current = buildCity(
-          cityWidth,
-          buildingWidth,
-          difficulty,
-          images,
-          store,
-        );
-
-        setLoaded(true);
-      })();
+      doBuildScenery();
+      setLoaded(true);
     }
-  });
-  return city.current;
+  }, [loaded, doBuildScenery]);
+  return scenery.current;
 };
 
-const buildCity = (
-  cityWidth: number,
+const buildScenery = (
+  forestWidth: number,
   buildingWidth: number,
   difficulty: number,
   images: GameImages,
   store: StoreContextType,
 ): IFloor[][] => {
-  const numBuildings = Math.floor(cityWidth / buildingWidth);
+  const numBuildings = Math.floor(forestWidth / buildingWidth);
   const factor = buildingWidth / DEFAULT_BUILDING_WIDTH;
   const buildings: IFloor[][] = [];
   for (let index = 0; index < numBuildings; index++) {
