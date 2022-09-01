@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import uuidv1 from 'uuid/v1';
 import { Type } from '../store/actions';
 import { StoreContextType, useStore } from '../store/store';
 import { GameImagesContext } from '../utils/Images';
-import { getBuildingHeight } from './Building';
+import { getBuildingHeight } from './Bamboo';
 
 // Style
 
@@ -49,8 +49,8 @@ export default function Drop(props: DropProps) {
   const { x, y, rotation, impact, buildingIndex } = usePosition(
     props.initX,
     props.initY,
-    store.state.cityHeight,
-    store.state.cityWidth,
+    store.state.forestHeight,
+    store.state.forestWidth,
     store,
     props.id,
   );
@@ -59,7 +59,7 @@ export default function Drop(props: DropProps) {
     if (impact) {
       removeBoomb(store, props.id);
       addExplosion(store, x, y);
-      if (buildingIndex) {
+      if (buildingIndex !== null) {
         removeFloor(store, buildingIndex);
       }
     }
@@ -81,8 +81,8 @@ export default function Drop(props: DropProps) {
 function usePosition(
   initX: number,
   initY: number,
-  cityHeight: number,
-  cityWidth: number,
+  forestHeight: number,
+  forestWidth: number,
   store: StoreContextType,
   id: string,
 ) {
@@ -101,9 +101,9 @@ function usePosition(
   speed.current += (DROP_ACCELERATION * dropTime.current ** 2) / 2;
   y.current += speed.current * frameDiff;
 
-  const { impact, buildingIndex } = checkBuildingImpact(
-    cityHeight,
-    cityWidth,
+  const targetImpact = checkTargetImpact(
+    forestHeight,
+    forestWidth,
     id,
     x.current,
     y.current + 20,
@@ -114,25 +114,35 @@ function usePosition(
     x: x.current,
     y: y.current,
     rotation: rotation.current,
-    impact,
-    buildingIndex,
+    impact: targetImpact.impact,
+    buildingIndex: targetImpact.impact ? targetImpact.buildingIndex : null,
   };
 }
 
-function checkBuildingImpact(
-  cityHeight: number,
-  cityWidth: number,
+type TargetImpact =
+  | {
+      impact: true;
+      buildingIndex: number | null;
+    }
+  | {
+      impact: false;
+    };
+
+function checkTargetImpact(
+  forestHeight: number,
+  forestWidth: number,
   id: string,
   x: number,
   y: number,
   store: StoreContextType,
-): { impact: boolean; buildingIndex?: number } {
-  const cityStartX = window.innerWidth / 2 - cityWidth / 2;
+): TargetImpact {
+  // const cityStartX = window.innerWidth / 2 - forestWidth / 2;
+  const cityStartX = 0;
   const buildingWidth = 42;
   const buildingIndex = Math.floor((x + 10 - cityStartX) / buildingWidth);
 
-  if (y > cityHeight) {
-    return { impact: true };
+  if (y > forestHeight) {
+    return { impact: true, buildingIndex: null };
   }
 
   const building = store.state.buildings[buildingIndex];
@@ -140,7 +150,7 @@ function checkBuildingImpact(
   if (building) {
     const buildingHeight = getBuildingHeight(building);
 
-    if (y > cityHeight - buildingHeight) {
+    if (y > forestHeight - buildingHeight) {
       return { impact: true, buildingIndex };
     }
   }

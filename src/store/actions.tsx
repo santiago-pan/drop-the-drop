@@ -1,6 +1,6 @@
 import { IDrop } from '../components/Drop';
 import { IExplosion } from '../components/Explosion';
-import { IFloor } from '../components/Building';
+import { IFloor } from '../components/Bamboo';
 
 export type Action<P = any> = {
   type: string;
