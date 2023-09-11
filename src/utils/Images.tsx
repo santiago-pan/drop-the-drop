@@ -14,7 +14,7 @@ export function ImagesProvider({ children }: { children: JSX.Element }) {
         setLoaded(true);
       })();
     }
-  });
+  },[loaded]);
   return (
     <GameImagesContext.Provider value={images.current}>
       {loaded && children}

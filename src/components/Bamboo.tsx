@@ -49,9 +49,9 @@ export function Bamboo(props: BuildingProps) {
           <FloorStyle
             key={index}
             src={floor.img.src}
-            x={props.x + store.state.buildingWidth * props.buildingIndex}
+            x={props.x + store.buildingWidth * props.buildingIndex}
             y={props.y + floorHeight}
-            width={store.state.buildingWidth}
+            width={store.buildingWidth}
           />
         );
       })}

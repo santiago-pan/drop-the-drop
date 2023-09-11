@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { Type } from '../store/actions';
+// import { Type } from '../store/actions';
 import { useStore } from '../store/store';
 import { GameImages, GameImagesContext } from '../utils/Images';
 
@@ -33,14 +33,13 @@ type ExplostionFrameProps = {
   width: number;
 };
 
-const ExplosionFrameStyle = styled.img<ExplostionFrameProps>`
-`;
+const ExplosionFrameStyle = styled.img<ExplostionFrameProps>``;
 
 const ExplosionFrameStyleAttr = styled(ExplosionFrameStyle).attrs(
   (props: ExplostionFrameProps) => ({
     style: {
       width: `${props.totalWidth}px`,
-      transform: `translate(${ -1 * props.frame * props.width}px)`,
+      transform: `translate(${-1 * props.frame * props.width}px)`,
     },
   }),
 )``;
@@ -81,7 +80,7 @@ export function Explosion(props: ExplosionProps) {
 
   useEffect(() => {
     if (frame.current > frames) {
-      store.dispatch({ type: Type.RemoveExplosion, payload: { id: props.id } });
+      store.removeExplosion(props.id);
     }
   }, [frames, store, props.id]);
 

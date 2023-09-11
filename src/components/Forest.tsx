@@ -1,14 +1,14 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useStore } from '../store/store';
 import { Bamboo, IFloor } from './Bamboo';
 
 export function Forest(props: {}) {
   const store = useStore();
-  const { x, y } = usePosition(store.state.forestWidth, store.state.forestHeight);
+  const { x, y } = usePosition(store.forestWidth, store.forestHeight);
 
   return (
     <div>
-      {store.state.buildings.map((building: IFloor[], index: number) => {
+      {store.buildings.map((building: IFloor[], index: number) => {
         return (
           <Bamboo
             key={index}

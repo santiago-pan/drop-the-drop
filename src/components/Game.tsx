@@ -1,17 +1,8 @@
-import {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { Type } from '../store/actions';
-import { StoreContextType, useStore } from '../store/store';
+import { useStore } from '../store/store';
 import { GameImages, GameImagesContext } from '../utils/Images';
 import backgroundImage from './../assets/images/desert.jpg';
-import { DEFAULT_BUILDING_WIDTH, IFloor } from './Bamboo';
 import { Cloud } from './Cloud';
 import Drop from './Drop';
 import { Explosion } from './Explosion';
@@ -49,7 +40,7 @@ const TitleImage = styled.img`
 
 const GameArea = styled(GameAreaStyle).attrs((props: any) => ({
   style: {
-    border: "2px solid #aaa",
+    border: '2px solid #aaa',
     borderRadius: '4px',
     backgroundImage: `url(${backgroundImage})`,
   },
@@ -78,8 +69,19 @@ enum GameStatus {
 }
 
 export function Game(props: {}) {
-  const store = useStore();
+  const images = useContext<GameImages>(GameImagesContext);
+
+  const buildScene = useStore(s => s.buildScene);
+  const cloud = useStore(s => s.cloud);
+  const drops = useStore(s => s.drops);
+  const explosions = useStore(s => s.explosions);
+
   const pauseGame = useRef(false);
+
+  useEffect(() => {
+    console.log('buildScene');
+    buildScene(images);
+  }, [images, buildScene]);
 
   const [gameState, setGameState] = useState<GameState>({
     timestamp: +new Date(),
@@ -112,123 +114,32 @@ export function Game(props: {}) {
   }, []);
 
   useEffect(() => {
+    function handleKeyPress(event: any) {
+      if (event.code === 'KeyP') {
+        pauseGame.current = !pauseGame.current;
+      }
+    }
     document.addEventListener('keypress', handleKeyPress);
     return () => {
       document.removeEventListener('keypress', handleKeyPress);
     };
-  });
-
-  useBuildScenery(store.state.forestWidth, 42, store.state.difficulty);
-
-  function handleKeyPress(event: any) {
-    if (event.code === 'KeyP') {
-      pauseGame.current = !pauseGame.current;
-    }
-  }
+  }, []);
 
   return (
     <Area>
-      <TitleImage src={titleImage}/>
+      <TitleImage src={titleImage} />
       <GameArea>
-        {store.state.cloud && (
-          <Cloud timeDiff={gameState.timeDiff} {...props} />
-        )}
+        {cloud && <Cloud timeDiff={gameState.timeDiff} {...props} />}
         {useMemo(() => {
           return <Forest />;
         }, [])}
-        {Array.from(store.state.drops.values()).map((drop) => (
+        {Array.from(drops.values()).map((drop) => (
           <Drop {...props} {...drop} key={drop.id} buildingWidth={42} />
         ))}
-        {Array.from(store.state.explosions.values()).map((explosion) => (
+        {Array.from(explosions.values()).map((explosion) => (
           <Explosion {...explosion} key={explosion.id} />
         ))}
       </GameArea>
     </Area>
   );
-}
-
-const useBuildScenery = (
-  forestWidth: number,
-  buildingWidth: number,
-  difficulty: number,
-): IFloor[][] => {
-  const [loaded, setLoaded] = useState(false);
-  const images = useContext<GameImages>(GameImagesContext);
-  const store = useStore();
-
-  const scenery = useRef<IFloor[][]>([]);
-
-  const doBuildScenery = useCallback(() => {
-    scenery.current = buildScenery(
-      forestWidth,
-      buildingWidth,
-      difficulty,
-      images,
-      store,
-    );
-  }, [forestWidth, buildingWidth, difficulty, images, store]);
-
-  useEffect(() => {
-    if (loaded === false) {
-      doBuildScenery();
-      setLoaded(true);
-    }
-  }, [loaded, doBuildScenery]);
-  return scenery.current;
-};
-
-const buildScenery = (
-  forestWidth: number,
-  buildingWidth: number,
-  difficulty: number,
-  images: GameImages,
-  store: StoreContextType,
-): IFloor[][] => {
-  const numBuildings = Math.floor(forestWidth / buildingWidth);
-  const factor = buildingWidth / DEFAULT_BUILDING_WIDTH;
-  const buildings: IFloor[][] = [];
-  for (let index = 0; index < numBuildings; index++) {
-    const building = getRandomBuilding(difficulty, factor, images);
-    buildings.push(building);
-    addBuilding(building, store);
-  }
-  return buildings;
-};
-
-function getRandomBuilding(
-  difficulty: number,
-  factor: number,
-  images: GameImages,
-): IFloor[] {
-  const roof = getRandomFloor(images.roofs, factor);
-  const basement = getRandomFloor(images.basements, factor);
-  const floor = getRandomFloor(images.floors, factor);
-  const numFloors = randomFloorIndex(difficulty) + 1;
-  const floors = Array(numFloors).fill(floor);
-  return [basement, ...floors, roof];
-}
-
-function getRandomFloor(
-  floors: { [key: string]: HTMLImageElement },
-  factor: number,
-): IFloor {
-  const floorIndex = randomFloorIndex(Object.keys(floors).length);
-  const img = Object.values(floors)[floorIndex];
-  const type = Object.keys(floors)[floorIndex];
-  return {
-    img,
-    height: img.height * factor,
-    type,
-  };
-}
-
-function randomFloorIndex(numFloors: number) {
-  return Math.floor(Math.random() * numFloors);
-}
-
-function addBuilding(building: IFloor[], store: StoreContextType) {
-  store.dispatch({
-    type: Type.AddBuilding,
-    payload: building,
-  });
 }

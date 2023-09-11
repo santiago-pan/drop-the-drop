@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import uuidv1 from 'uuid/v1';
-import { Type } from '../store/actions';
-import { StoreContextType, useStore } from '../store/store';
+import { useStore } from '../store/store';
 import cloud from './../assets/images/ic_cloud_1.png';
-import { getBuildingHeight } from './Bamboo';
+import { IFloor, getBuildingHeight } from './Bamboo';
+import { IExplosion } from './Explosion';
 
 // Cloud configuration
 const SPEED = 100;
@@ -41,48 +41,44 @@ export function Cloud(props: CloudProps) {
   const store = useStore();
 
   const { x, y, impact } = usePosition(
+    store.buildings,
     props.timeDiff,
-    store.state.forestWidth,
-    store.state.forestHeight,
-    store,
+    store.forestWidth,
+    store.forestHeight,
   );
 
   useEffect(() => {
-    document.addEventListener('keypress', handleKeyPress);
-    return () => {
-      document.removeEventListener('keypress', handleKeyPress);
-    };
-  });
-
-  useEffect(() => {
-    if (impact) {
-      removeCloud(store);
-      addExplosion(store, x, y);
-    }
-  }, [impact, store, x, y]);
-
-  function handleKeyPress(event: any) {
-    if (event.code === 'Space') {
-      store.dispatch({
-        type: Type.AddDrop,
-        payload: {
+    function handleKeyPress(event: any) {
+      if (event.code === 'Space') {
+        store.addDrop({
           id: uuidv1(),
           type: 'drop1',
           initX: x + CLOUD_WIDTH / 2,
           initY: y + 40,
-        },
-      });
+        });
+      }
     }
-  }
+    document.addEventListener('keypress', handleKeyPress);
+    return () => {
+      document.removeEventListener('keypress', handleKeyPress);
+    };
+  }, [store, x, y]);
+
+  useEffect(() => {
+    if (impact) {
+      store.destroyCloud();
+      store.addExplosion(newExplosion(x, y));
+    }
+  }, [impact, store, x, y]);
 
   return <CloudStyleAttr src={cloud} x={x} y={y} />;
 }
 
 function usePosition(
+  buildings: Array<IFloor[]>,
   timeDiff: number,
   forestWidth: number,
   forestHeight: number,
-  store: StoreContextType,
 ) {
   const cloudStartX = useRef(-CLOUD_WIDTH);
   const maxCloudX = useRef(forestWidth);
@@ -99,28 +95,28 @@ function usePosition(
   }
 
   const impact = checkImpact(
+    buildings,
     forestHeight,
     forestWidth,
     x.current,
     y.current,
-    store,
   );
 
   return { x: x.current, y: y.current, explosion: explosion.current, impact };
 }
 
 function checkImpact(
+  buildings: Array<IFloor[]>,
   forestHeight: number,
   forestWidth: number,
   x: number,
   y: number,
-  store: StoreContextType,
 ): boolean {
   const buildingWidth = 42;
   const xOffset = buildingWidth / 2;
   const buildingIndex = Math.floor((x + CLOUD_WIDTH - xOffset) / buildingWidth);
 
-  const building = store.state.buildings[buildingIndex];
+  const building = buildings[buildingIndex];
 
   if (building) {
     const buildingHeight = getBuildingHeight(building);
@@ -132,18 +128,6 @@ function checkImpact(
   return false;
 }
 
-function removeCloud(store: StoreContextType) {
-  store.dispatch({ type: Type.DestroyCloud, payload: {} });
-}
-
-function addExplosion(store: StoreContextType, initX: number, initY: number) {
-  store.dispatch({
-    type: Type.AddExplosion,
-    payload: {
-      id: uuidv1(),
-      type: 'explosion2',
-      initX,
-      initY,
-    },
-  });
+function newExplosion(initX: number, initY: number): IExplosion {
+  return { id: uuidv1(), type: 'explosion2', initX, initY };
 }

@@ -1,8 +1,8 @@
 import { useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import uuidv1 from 'uuid/v1';
-import { Type } from '../store/actions';
-import { StoreContextType, useStore } from '../store/store';
+// import { Type } from '../store/actions';
+import { GameStore, useStore } from '../store/store';
 import { GameImagesContext } from '../utils/Images';
 import { getBuildingHeight } from './Bamboo';
 
@@ -49,8 +49,8 @@ export default function Drop(props: DropProps) {
   const { x, y, rotation, impact, buildingIndex } = usePosition(
     props.initX,
     props.initY,
-    store.state.forestHeight,
-    store.state.forestWidth,
+    store.forestHeight,
+    store.forestWidth,
     store,
     props.id,
   );
@@ -83,7 +83,7 @@ function usePosition(
   initY: number,
   forestHeight: number,
   forestWidth: number,
-  store: StoreContextType,
+  store: GameStore,
   id: string,
 ) {
   const timeRef = useRef<number>(+new Date());
@@ -134,7 +134,7 @@ function checkTargetImpact(
   id: string,
   x: number,
   y: number,
-  store: StoreContextType,
+  store: GameStore,
 ): TargetImpact {
   // const cityStartX = window.innerWidth / 2 - forestWidth / 2;
   const cityStartX = 0;
@@ -145,7 +145,7 @@ function checkTargetImpact(
     return { impact: true, buildingIndex: null };
   }
 
-  const building = store.state.buildings[buildingIndex];
+  const building = store.buildings[buildingIndex];
 
   if (building) {
     const buildingHeight = getBuildingHeight(building);
@@ -157,27 +157,19 @@ function checkTargetImpact(
   return { impact: false };
 }
 
-function removeBoomb(store: StoreContextType, id: string) {
-  store.dispatch({ type: Type.RemoveDrop, payload: { id } });
+function removeBoomb(store: GameStore, id: string) {
+  store.removeDrop(id);
 }
 
-function addExplosion(store: StoreContextType, initX: number, initY: number) {
-  store.dispatch({
-    type: Type.AddExplosion,
-    payload: {
-      id: uuidv1(),
-      type: 'explosion1',
-      initX,
-      initY,
-    },
+function addExplosion(store: GameStore, initX: number, initY: number) {
+  store.addExplosion({
+    id: uuidv1(),
+    type: 'explosion1',
+    initX,
+    initY,
   });
 }
 
-function removeFloor(store: StoreContextType, index: number) {
-  store.dispatch({
-    type: Type.RemoveFloor,
-    payload: {
-      index,
-    },
-  });
+function removeFloor(store: GameStore, index: number) {
+  store.removeFloor(index);
 }
