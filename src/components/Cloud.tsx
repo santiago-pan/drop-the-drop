@@ -45,17 +45,23 @@ export function Cloud(props: CloudProps) {
     props.timeDiff,
     store.forestWidth,
     store.forestHeight,
+    store
   );
 
   useEffect(() => {
     function handleKeyPress(event: any) {
       if (event.code === 'Space') {
-        store.addDrop({
-          id: uuidv1(),
-          type: 'drop1',
-          initX: x + CLOUD_WIDTH / 2,
-          initY: y + 40,
-        });
+        // Check if drops are available
+        if (store.useDrops()) {
+          store.addWaterDrop({
+            id: uuidv1(),
+            type: 'water1',
+            initX: x + CLOUD_WIDTH / 2,
+            initY: y + 40,
+          });
+        } else {
+          console.log('No drops left for this pass!');
+        }
       }
     }
     document.addEventListener('keypress', handleKeyPress);
@@ -79,19 +85,43 @@ function usePosition(
   timeDiff: number,
   forestWidth: number,
   forestHeight: number,
+  store: any
 ) {
   const cloudStartX = useRef(-CLOUD_WIDTH);
   const maxCloudX = useRef(forestWidth);
   const x = useRef(cloudStartX.current);
   const y = useRef(0);
   const explosion = useRef(false);
+  const completedPass = useRef(false);
+  const lastResetTrigger = useRef(store.cloudResetTrigger);
+  
+  // Reset cloud position when cloudResetTrigger changes (game is restarted)
+  if (store.cloudResetTrigger !== lastResetTrigger.current) {
+    x.current = cloudStartX.current;
+    y.current = 0;
+    lastResetTrigger.current = store.cloudResetTrigger;
+    console.log('Cloud position reset due to game restart trigger:', store.cloudResetTrigger);
+  }
 
-  const displacement = (timeDiff / 1000) * SPEED;
-  if (x.current > maxCloudX.current) {
-    y.current = y.current + DOWN_SPEED;
-    x.current = -CLOUD_WIDTH;
-  } else {
-    x.current = x.current + displacement;
+  // Don't update position if game is paused (win or lose state)
+  if (!store.gamePaused) {
+    const displacement = (timeDiff / 1000) * SPEED;
+    if (x.current > maxCloudX.current) {
+      y.current = y.current + DOWN_SPEED;
+      x.current = -CLOUD_WIDTH;
+      // Reset drops counter when cloud starts a new pass
+      if (!completedPass.current) {
+        store.resetDropsCounter();
+        console.log('Cloud started a new pass, drops reset to', store.maxDropsPerPass);
+        completedPass.current = true;
+      }
+    } else {
+      x.current = x.current + displacement;
+      // Reset the completedPass flag when the cloud is in the middle of the screen
+      if (x.current > 0 && completedPass.current) {
+        completedPass.current = false;
+      }
+    }
   }
 
   const impact = checkImpact(

@@ -1,8 +1,8 @@
 // Roofs
 import ic_floor_roof_type_a from './ic_floor_roof_type_a.png';
-import ic_floor_roof_type_b from './ic_floor_roof_type_b.png';
-import ic_floor_roof_type_c from './ic_floor_roof_type_c.png';
-import ic_floor_roof_type_d from './ic_floor_roof_type_d.png';
+import ic_floor_roof_type_b from './ic_floor_roof_type_a.png';
+import ic_floor_roof_type_c from './ic_floor_roof_type_a.png';
+import ic_floor_roof_type_d from './ic_floor_roof_type_a.png';
 import ic_floor_roof_type_e from './ic_floor_roof_type_e.png';
 import ic_floor_roof_type_f from './ic_floor_roof_type_f.png';
 import ic_floor_roof_type_g from './ic_mosquito_type_a.png';

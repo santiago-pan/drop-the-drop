@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { DEFAULT_BUILDING_WIDTH, IFloor } from '../components/Bamboo';
-import { IDrop } from '../components/Drop';
+import { IWaterDrop } from '../components/WaterDrop';
 import { IExplosion } from '../components/Explosion';
 import { GameImages } from '../utils/Images';
 
@@ -11,32 +11,44 @@ export type GameStore = {
   buildingWidth: number;
   difficulty: number;
   buildings: Array<IFloor[]>;
-  drops: Map<string, IDrop>;
+  waterDrops: Map<string, IWaterDrop>;
   explosions: Map<string, IExplosion>;
   cloud: boolean;
+  hasWon: boolean;
+  gamePaused: boolean;
+  dropsLeft: number;
+  maxDropsPerPass: number;
+  cloudResetTrigger: number; // Incremented to trigger cloud position reset
   addBuilding: (building: IFloor[]) => void;
   removeBuilding: (index: number) => void;
-  addDrop: (drop: IDrop) => void;
-  removeDrop: (id: string) => void;
+  addWaterDrop: (waterDrop: IWaterDrop) => void;
+  removeWaterDrop: (id: string) => void;
   addExplosion: (explosion: IExplosion) => void;
   removeExplosion: (id: string) => void;
   removeFloor: (index: number) => void;
   destroyCloud: () => void;
+  resetDropsCounter: () => void;
+  useDrops: () => boolean;
   buildScene: (images: GameImages) => void;
+  checkWinCondition: () => void;
+  resetGame: () => void;
 };
 
 export const useStore = create<GameStore>((set, get) => ({
-  // Default State (From your InitialState)
   frameRate: 25,
   forestWidth: 800,
   forestHeight: 431,
   difficulty: 3,
   buildingWidth: 42,
   buildings: new Array<[]>(),
-  drops: new Map<string, IDrop>(),
+  waterDrops: new Map<string, IWaterDrop>(),
   explosions: new Map<string, IExplosion>(),
   cloud: true,
-
+  hasWon: false,
+  gamePaused: false,
+  dropsLeft: 5,
+  maxDropsPerPass: 5,
+  cloudResetTrigger: 0,
   buildScene: (images: GameImages) => {
     const { forestWidth, buildingWidth, difficulty } = get();
 
@@ -58,14 +70,14 @@ export const useStore = create<GameStore>((set, get) => ({
       buildings: state.buildings.filter((_, i) => i !== index),
     }));
   },
-  addDrop: (drop: IDrop) => {
-    set((state) => ({ drops: new Map(state.drops).set(drop.id, drop) }));
+  addWaterDrop: (waterDrop: IWaterDrop) => {
+    set((state) => ({ waterDrops: new Map(state.waterDrops).set(waterDrop.id, waterDrop) }));
   },
-  removeDrop: (id: string) => {
+  removeWaterDrop: (id: string) => {
     set((state) => {
-      const drops = new Map(state.drops);
-      drops.delete(id);
-      return { drops };
+      const waterDrops = new Map(state.waterDrops);
+      waterDrops.delete(id);
+      return { waterDrops };
     });
   },
   addExplosion: (explosion: IExplosion) => {
@@ -93,6 +105,58 @@ export const useStore = create<GameStore>((set, get) => ({
   destroyCloud: () => {
     set(() => ({ cloud: false }));
   },
+  resetDropsCounter: () => {
+    set((state) => ({ dropsLeft: state.maxDropsPerPass }));
+  },
+  useDrops: () => {
+    const { dropsLeft } = get();
+    if (dropsLeft <= 0) {
+      return false; // No drops left
+    }
+    set((state) => ({ dropsLeft: state.dropsLeft - 1 }));
+    return true; // Successfully used a drop
+  },
+  checkWinCondition: () => {    
+    const { buildings } = get();
+    console.log('Checking win condition...');
+    console.log('Current buildings:', buildings);
+    
+    // Check if all mosquitoes have been destroyed - this is the only win condition
+    const allMosquitoesDestroyed = !buildings.some(building => 
+      building.some(floor => floor.type.startsWith('MOSQUITO'))
+    );
+    
+    console.log('All mosquitoes destroyed?', allMosquitoesDestroyed);
+    
+    // Count mosquitoes for debugging
+    let mosquitoCount = 0;
+    buildings.forEach(building => {
+      building.forEach(floor => {
+        if (floor.type.startsWith('MOSQUITO')) {
+          mosquitoCount++;
+        }
+      });
+    });
+    console.log('Mosquito count:', mosquitoCount);
+    
+    if (allMosquitoesDestroyed) {
+      // If player won, set hasWon and pause the game
+      set(() => ({ hasWon: true, gamePaused: true }));
+      console.log('Game won and paused!');
+    }
+  },
+  resetGame: () => {
+    set((state) => ({
+      buildings: [],
+      waterDrops: new Map<string, IWaterDrop>(),
+      explosions: new Map<string, IExplosion>(),
+      cloud: true,
+      hasWon: false,
+      gamePaused: false,
+      dropsLeft: state.maxDropsPerPass,
+      cloudResetTrigger: state.cloudResetTrigger + 1 // Increment to trigger cloud position reset
+    }));
+  }
 }));
 
 function getRandomBuilding(
@@ -100,7 +164,9 @@ function getRandomBuilding(
   factor: number,
   images: GameImages,
 ): IFloor[] {
-  const roof = getRandomFloor(images.roofs, factor);
+  // Randomly decide if this building should have a mosquito
+  const hasMosquito = Math.random() < 0.3; // 30% chance for mosquito
+  const roof = getRandomFloor(hasMosquito ? images.mosquitoes : images.roofs, factor);
   const basement = getRandomFloor(images.basements, factor);
   const floor = getRandomFloor(images.floors, factor);
   const numFloors = randomFloorIndex(difficulty) + 1;

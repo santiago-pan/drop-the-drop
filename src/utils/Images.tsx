@@ -26,34 +26,41 @@ type ImagesSet = { [key: string]: HTMLImageElement };
 
 export type GameImages = {
   roofs: ImagesSet;
+  mosquitoes: ImagesSet;
   floors: ImagesSet;
   basements: ImagesSet;
-  planes: ImagesSet;
+  clouds: ImagesSet;
   greens: ImagesSet;
   explosions: ImagesSet;
-  drops: ImagesSet;
+  waterDrops: ImagesSet;
 };
 
 async function Images(): Promise<GameImages> {
   const roofs = await loadRoofs();
+  const mosquitoes = await loadMosquitoes();
   const floors = await loadFloors();
   const basements = await loadBasements();
-  const planes = await loadPlanes();
+  const clouds = await loadClouds();
   const greens = await loadGreenBuildings();
   const explosions = await loadExplosions();
-  const drops = await loadDrops();
+  const waterDrops = await loadWaterDrops();
 
   async function loadRoofs() {
     return {
-      FLOOR_ROOF_A: await loadImage(images.ic_floor_roof_type_a),
-      // FLOOR_ROOF_B: await loadImage(images.ic_floor_roof_type_b),
-      // FLOOR_ROOF_C: await loadImage(images.ic_floor_roof_type_c),
-      // FLOOR_ROOF_D: await loadImage(images.ic_floor_roof_type_d),
-      FLOOR_ROOF_E: await loadImage(images.ic_floor_roof_type_e),
-      FLOOR_ROOF_F: await loadImage(images.ic_floor_roof_type_f),
-      FLOOR_ROOF_G: await loadImage(images.ic_floor_roof_type_g),
-      FLOOR_ROOF_H: await loadImage(images.ic_floor_roof_type_h),
-      FLOOR_ROOF_I: await loadImage(images.ic_floor_roof_type_i),
+      ROOF_A: await loadImage(images.ic_floor_roof_type_a),
+      ROOF_B: await loadImage(images.ic_floor_roof_type_b),
+      ROOF_C: await loadImage(images.ic_floor_roof_type_c),
+      ROOF_D: await loadImage(images.ic_floor_roof_type_d),
+      ROOF_E: await loadImage(images.ic_floor_roof_type_e),
+      ROOF_F: await loadImage(images.ic_floor_roof_type_f),
+    };
+  }
+
+  async function loadMosquitoes() {
+    return {
+      MOSQUITO_A: await loadImage(images.ic_floor_roof_type_g),
+      MOSQUITO_B: await loadImage(images.ic_floor_roof_type_h),
+      MOSQUITO_C: await loadImage(images.ic_floor_roof_type_i),
     };
   }
 
@@ -76,11 +83,9 @@ async function Images(): Promise<GameImages> {
     };
   }
 
-  async function loadPlanes() {
+  async function loadClouds() {
     return {
-      // PLANE_A: await loadImage(images.ic_plane_type_a),
-      PLANE_B: await loadImage(images.ic_plane_type_b),
-      // PLANE_C: await loadImage(images.ic_plane_type_c),
+      CLOUD_B: await loadImage(images.ic_plane_type_b),
     };
   }
 
@@ -100,11 +105,11 @@ async function Images(): Promise<GameImages> {
     };
   }
 
-  async function loadDrops() {
+  async function loadWaterDrops() {
     return {
-      DROP_1: await loadImage(images.ic_drop_1),
-      DROP_2: await loadImage(images.ic_drop_2),
-      DROP_3: await loadImage(images.ic_drop_3),
+      WATER1: await loadImage(images.ic_drop_1),
+      WATER2: await loadImage(images.ic_drop_2),
+      WATER3: await loadImage(images.ic_drop_3),
     };
   }
 
@@ -118,5 +123,5 @@ async function Images(): Promise<GameImages> {
     });
   }
 
-  return { roofs, floors, basements, planes, greens, explosions, drops };
+  return { roofs, mosquitoes, floors, basements, clouds, greens, explosions, waterDrops };
 }

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useMemo, useRef } from 'react';
 import styled from 'styled-components';
 import uuidv1 from 'uuid/v1';
 // import { Type } from '../store/actions';
@@ -34,16 +34,16 @@ const DropStyleAttr = styled(DropStyle).attrs((props: any) => ({
 const DROP_ACCELERATION = 10;
 const DROP_INITIAL_SPEED = 80;
 
-export type IDrop = {
+export type IWaterDrop = {
   id: string;
-  type: 'drop1' | 'drop2' | 'drop3';
+  type: 'water1' | 'water2' | 'water3';
   initX: number;
   initY: number;
 };
 
-type DropProps = { buildingWidth: number } & IDrop;
+type WaterDropProps = { buildingWidth: number } & IWaterDrop;
 
-export default function Drop(props: DropProps) {
+export default function WaterDrop(props: WaterDropProps) {
   const store = useStore();
 
   const { x, y, rotation, impact, buildingIndex } = usePosition(
@@ -57,19 +57,24 @@ export default function Drop(props: DropProps) {
 
   useEffect(() => {
     if (impact) {
-      removeBoomb(store, props.id);
+      store.removeWaterDrop(props.id);
       addExplosion(store, x, y);
       if (buildingIndex !== null) {
         removeFloor(store, buildingIndex);
+        // Check win condition after potentially destroying a mosquito
+        store.checkWinCondition();
       }
     }
   }, [impact, buildingIndex, store, x, y, props.id]);
 
   const images = useContext(GameImagesContext);
+  const waterDropImage = useMemo(() => {
+    return images.waterDrops[props.type.replace('water', 'WATER')];
+  }, [props.type, images]);
 
   return (
     <DropStyleAttr
-      src={images.drops.DROP_1.src}
+      src={waterDropImage.src}
       x={x}
       y={y}
       width={20}
@@ -158,7 +163,7 @@ function checkTargetImpact(
 }
 
 function removeBoomb(store: GameStore, id: string) {
-  store.removeDrop(id);
+  store.removeWaterDrop(id);
 }
 
 function addExplosion(store: GameStore, initX: number, initY: number) {
