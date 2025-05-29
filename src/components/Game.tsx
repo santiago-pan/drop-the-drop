@@ -16,6 +16,7 @@ const Area = styled.div`
   background: #87CEEB;
   padding: 20px;
   box-sizing: border-box;
+  overflow: hidden;
 `;
 
 const GameAreaStyle = styled.div`
@@ -23,12 +24,22 @@ const GameAreaStyle = styled.div`
   max-width: 800px;
   width: 100%;
   background: #8FBC8F;
-  margin: 20px auto;
+  margin: 0px;
   overflow: hidden;
   position: relative;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  
+  @media (max-width: 850px) {
+    width: 99vw;
+    height: calc(95vw * 0.54); /* Maintain aspect ratio */
+  }
+  
+  @media (max-height: 600px) {
+    height: 70vh;
+    width: calc(70vh * 1.85); /* Maintain aspect ratio */
+  }
 `;
 
 const GameTitle = styled.h1`
@@ -51,6 +62,15 @@ const GameTitle = styled.h1`
     60% {
       transform: translateY(-10px);
     }
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    margin: 10px 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 

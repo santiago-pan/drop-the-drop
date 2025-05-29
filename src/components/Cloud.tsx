@@ -29,6 +29,7 @@ const CloudStyleAttr = styled(CloudStyle).attrs(
     style: {
       top: `${props.y}px`,
       left: `${props.x}px`,
+      cursor: 'pointer',
     },
   }),
 )``;
@@ -48,20 +49,33 @@ export function Cloud(props: CloudProps) {
     store
   );
 
+  // Function to create a water drop
+  const createWaterDrop = () => {
+    // Check if drops are available
+    if (store.useDrops()) {
+      store.addWaterDrop({
+        id: uuidv1(),
+        type: 'water1',
+        initX: x + CLOUD_WIDTH / 2,
+        initY: y + 40,
+      });
+    } else {
+      
+    }
+  };
+
+  // Handle click/touch on the cloud
+  const handleCloudClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    createWaterDrop();
+  };
+
+  // Handle keyboard events (space bar)
   useEffect(() => {
     function handleKeyPress(event: any) {
       if (event.code === 'Space') {
-        // Check if drops are available
-        if (store.useDrops()) {
-          store.addWaterDrop({
-            id: uuidv1(),
-            type: 'water1',
-            initX: x + CLOUD_WIDTH / 2,
-            initY: y + 40,
-          });
-        } else {
-          console.log('No drops left for this pass!');
-        }
+        createWaterDrop();
       }
     }
     document.addEventListener('keypress', handleKeyPress);
@@ -77,7 +91,7 @@ export function Cloud(props: CloudProps) {
     }
   }, [impact, store, x, y]);
 
-  return <CloudStyleAttr src={cloud} x={x} y={y} />;
+  return <CloudStyleAttr src={cloud} x={x} y={y} onClick={handleCloudClick} />;
 }
 
 function usePosition(
@@ -100,7 +114,6 @@ function usePosition(
     x.current = cloudStartX.current;
     y.current = 0;
     lastResetTrigger.current = store.cloudResetTrigger;
-    console.log('Cloud position reset due to game restart trigger:', store.cloudResetTrigger);
   }
 
   // Don't update position if game is paused (win or lose state)
@@ -112,7 +125,6 @@ function usePosition(
       // Reset drops counter when cloud starts a new pass
       if (!completedPass.current) {
         store.resetDropsCounter();
-        console.log('Cloud started a new pass, drops reset to', store.maxDropsPerPass);
         completedPass.current = true;
       }
     } else {

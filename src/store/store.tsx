@@ -36,7 +36,7 @@ export type GameStore = {
 
 export const useStore = create<GameStore>((set, get) => ({
   frameRate: 25,
-  forestWidth: 800,
+  forestWidth: 768,
   forestHeight: 431,
   difficulty: 3,
   buildingWidth: 42,
@@ -118,16 +118,12 @@ export const useStore = create<GameStore>((set, get) => ({
   },
   checkWinCondition: () => {    
     const { buildings } = get();
-    console.log('Checking win condition...');
-    console.log('Current buildings:', buildings);
     
     // Check if all mosquitoes have been destroyed - this is the only win condition
     const allMosquitoesDestroyed = !buildings.some(building => 
       building.some(floor => floor.type.startsWith('MOSQUITO'))
     );
-    
-    console.log('All mosquitoes destroyed?', allMosquitoesDestroyed);
-    
+        
     // Count mosquitoes for debugging
     let mosquitoCount = 0;
     buildings.forEach(building => {
@@ -137,12 +133,10 @@ export const useStore = create<GameStore>((set, get) => ({
         }
       });
     });
-    console.log('Mosquito count:', mosquitoCount);
     
     if (allMosquitoesDestroyed) {
       // If player won, set hasWon and pause the game
       set(() => ({ hasWon: true, gamePaused: true }));
-      console.log('Game won and paused!');
     }
   },
   resetGame: () => {
