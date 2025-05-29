@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun and educational games for kids including Drop the Drop, Space Bar Animals, and Firetruck. Free online games that help children learn while having fun!">
+    <meta name="keywords" content="kids games, educational games, drop the drop, space bar animals, firetruck game, children games, free online games">
+    <meta name="author" content="Santiago Pan Carneiro">
+    <title>Pan Carneiro Kids Games - Fun Educational Games for Children</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF69B4;
+            --secondary-color: #4CAF50;
+            --accent-color: #2196F3;
+            --background-color: #F8F9FA;
+            --card-background: #FFFFFF;
+            --text-color: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="3" fill="%23FFD700" opacity="0.3"/><circle cx="50" cy="50" r="2" fill="%234CAF50" opacity="0.3"/><circle cx="80" cy="30" r="4" fill="%232196F3" opacity="0.3"/><circle cx="30" cy="80" r="3" fill="%23FF69B4" opacity="0.3"/><circle cx="70" cy="70" r="2" fill="%23FFD700" opacity="0.3"/></svg>');
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+        
+        .games-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .game-card {
+            background: var(--card-background);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+            position: relative;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .game-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+        }
+        
+        .drop-the-drop {
+            background-color: #87CEEB;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 15 C 40 30, 10 50, 50 85 C 90 50, 60 30, 50 15" fill="%231E90FF"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+        }
+        
+        .space-bar-animals {
+            background-color: #98FB98;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="40" r="20" fill="%23F5DEB3"/><circle cx="40" cy="35" r="3" fill="%23000"/><circle cx="60" cy="35" r="3" fill="%23000"/><path d="M40 50 C 45 55, 55 55, 60 50" stroke="%23000" stroke-width="2" fill="none"/><path d="M30 30 L 15 15 M 70 30 L 85 15" stroke="%23F5DEB3" stroke-width="4"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+        }
+        
+        .firetruck {
+            background-color: #FFB6C1;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="40" width="60" height="30" fill="%23FF0000"/><rect x="10" y="60" width="80" height="10" fill="%23FF0000"/><circle cx="25" cy="70" r="10" fill="%23333"/><circle cx="75" cy="70" r="10" fill="%23333"/><rect x="70" y="30" width="10" height="10" fill="%23FF0000"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+        }
+        
+        .game-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .game-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .game-description {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .play-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-family: 'Comic Neue', cursive;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: block;
+            margin-top: auto;
+        }
+        
+        .play-button:hover {
+            background-color: #45a049;
+        }
+        
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 8px;
+        }
+        
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #666;
+            font-size: 1rem;
+            padding: 20px;
+            border-top: 2px dashed var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .games-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pan Carneiro Kids Games</h1>
+            <p class="subtitle">Fun and educational games for children of all ages!</p>
+        </header>
+        
+        <main>
+            <div class="games-container">
+                <a href="https://dropthedrop.pancarneiro.com" class="game-card" aria-label="Play Drop the Drop game">
+                    <div class="game-image drop-the-drop"></div>
+                    <div class="game-content">
+                        <h2 class="game-title">Drop the Drop</h2>
+                        <p class="game-description">Help the cloud drop water to destroy mosquitoes! Be careful not to crash your cloud into buildings or the ground. A fun game that teaches hand-eye coordination and timing.</p>
+                        <div class="play-button">Play Now! 💧</div>
+                    </div>
+                </a>
+                
+                <a href="https://spacebar.pancarneiro.com" class="game-card" aria-label="Play Space Bar Animals game">
+                    <div class="game-image space-bar-animals"></div>
+                    <div class="game-content">
+                        <h2 class="game-title">Space Bar Animals</h2>
+                        <p class="game-description">Press the space bar to help animals jump over obstacles! Learn about different animals while improving your reaction time and keyboard skills.</p>
+                        <div class="play-button">Play Now! 🐾</div>
+                    </div>
+                </a>
+                
+                <a href="https://firetruck.pancarneiro.com" class="game-card" aria-label="Play Firetruck game">
+                    <div class="game-image firetruck"></div>
+                    <div class="game-content">
+                        <h2 class="game-title">Firetruck</h2>
+                        <p class="game-description">Drive the firetruck to save the day! Put out fires and rescue people in this exciting game that teaches children about bravery and helping others.</p>
+                        <div class="play-button">Play Now! 🚒</div>
+                    </div>
+                </a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 Pan Carneiro Kids Games. All games are designed to be educational and fun for children.</p>
+            <p>For questions or feedback, please contact: <a href="mailto:info@pancarneiro.com">info@pancarneiro.com</a></p>
+        </footer>
+    </div>
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "Game",
+                "position": 1,
+                "name": "Drop the Drop",
+                "description": "Help the cloud drop water to destroy mosquitoes! Be careful not to crash your cloud into buildings or the ground.",
+                "url": "https://dropthedrop.pancarneiro.com",
+                "genre": "Educational, Action",
+                "audience": {
+                    "@type": "PeopleAudience",
+                    "suggestedMinAge": "4"
+                }
+            },
+            {
+                "@type": "Game",
+                "position": 2,
+                "name": "Space Bar Animals",
+                "description": "Press the space bar to help animals jump over obstacles! Learn about different animals while improving your reaction time.",
+                "url": "https://spacebar.pancarneiro.com",
+                "genre": "Educational, Action",
+                "audience": {
+                    "@type": "PeopleAudience",
+                    "suggestedMinAge": "4"
+                }
+            },
+            {
+                "@type": "Game",
+                "position": 3,
+                "name": "Firetruck",
+                "description": "Drive the firetruck to save the day! Put out fires and rescue people in this exciting game.",
+                "url": "https://firetruck.pancarneiro.com",
+                "genre": "Educational, Action",
+                "audience": {
+                    "@type": "PeopleAudience",
+                    "suggestedMinAge": "4"
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
